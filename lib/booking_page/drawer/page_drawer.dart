@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'drawer_item.dart';
+
 class BookingPageDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,10 +13,39 @@ class BookingPageDrawer extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         color: Colors.transparent,
-        child: Column(children: <Widget>[
-          _buildTopSpacer(context),
-        ]),
+        child: Column(
+          children: <Widget>[
+            _buildTopSpacer(context),
+            _buildProfile(),
+            _buildWorkingHours(),
+            _buildSettings(),
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _buildProfile() {
+    return DrawerItem(
+      icon: Icons.account_circle,
+      text: 'معلومات الحساب',
+      direction: null,
+    );
+  }
+
+  Widget _buildWorkingHours() {
+    return DrawerItem(
+      icon: Icons.access_time_outlined,
+      text: 'ساعات العمل',
+      direction: null,
+    );
+  }
+
+  Widget _buildSettings() {
+    return DrawerItem(
+      icon: Icons.settings,
+      text: 'إعدادات التطبيق',
+      direction: null,
     );
   }
 
@@ -33,7 +64,5 @@ class BookingPageDrawer extends StatelessWidget {
     );
   }
 }
-// profile
-// working hours
 // prices
 // settings
