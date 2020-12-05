@@ -38,6 +38,7 @@ class BookingPage extends StatelessWidget {
       elevation: 0,
       title: Text('salon_name'.tr),
       centerTitle: true,
+      automaticallyImplyLeading: false,
     );
   }
 
