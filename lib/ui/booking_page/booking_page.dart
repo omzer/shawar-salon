@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shawar_salon/booking_page/drawer/page_drawer.dart';
-import 'package:shawar_salon/booking_page/widgets/booking_btn.dart';
-import 'package:shawar_salon/booking_page/widgets/booking_info.dart';
-import 'package:shawar_salon/booking_page/widgets/shop_status.dart';
+
+import 'drawer/page_drawer.dart';
+import 'widgets/booking_btn.dart';
+import 'widgets/booking_info.dart';
+import 'widgets/shop_status.dart';
 
 class BookingPage extends StatelessWidget {
   final bool shopStatus;

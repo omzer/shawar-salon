@@ -51,7 +51,7 @@ class BookingPageDrawer extends StatelessWidget {
 
   Widget _buildTopSpacer(context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.fromLTRB(0, 16, 8, 0),
       width: double.infinity,
       height: 80,
       child: Align(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shawar_salon/booking_page/booking_page.dart';
 import 'package:shawar_salon/services/theme_service.dart';
+import 'package:shawar_salon/ui/booking_page/booking_page.dart';
 
 import 'localization/Messages.dart';
 

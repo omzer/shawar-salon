@@ -26,7 +26,7 @@ class DrawerItem extends StatelessWidget {
             Navigator.pop(context);
             Get.to(direction);
           },
-          leading: Icon(icon, size: 30, color: Theme.of(context).primaryColor),
+          leading: Icon(icon, size: 30, color: Colors.white),
           title: Text(text, style: TextStyle(fontSize: 22)),
         ),
       ),
