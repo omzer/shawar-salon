@@ -6,7 +6,7 @@ class Messages extends Translations {
         'ar': {
           'salon_name': 'صالون شاور',
           'book': 'إحجز',
-          'you_shaved_message': 'لقد حلقت %s مرة قبلاً',
+          'shave_count_message': 'لقد حلقت %s مرة قبلاً',
         }
       };
 }

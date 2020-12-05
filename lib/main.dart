@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       Theme.of(context),
       Colors.indigo,
       Colors.white,
-      Colors.orangeAccent,
+      Colors.orange,
     );
   }
 }

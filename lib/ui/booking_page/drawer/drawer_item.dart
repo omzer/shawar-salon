@@ -28,6 +28,11 @@ class DrawerItem extends StatelessWidget {
           },
           leading: Icon(icon, size: 30, color: Colors.white),
           title: Text(text, style: TextStyle(fontSize: 22)),
+          trailing: Icon(
+            Icons.arrow_back_outlined,
+            size: 30,
+            color: Colors.white,
+          ),
         ),
       ),
     );

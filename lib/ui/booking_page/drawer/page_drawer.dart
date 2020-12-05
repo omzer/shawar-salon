@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'drawer_item.dart';
+import 'shave_counter.dart';
 
 class BookingPageDrawer extends StatelessWidget {
   @override
@@ -16,6 +17,7 @@ class BookingPageDrawer extends StatelessWidget {
         child: Column(
           children: <Widget>[
             _buildTopSpacer(context),
+            ShaveCounter(),
             _buildProfile(),
             _buildWorkingHours(),
             _buildSettings(),
@@ -64,5 +66,3 @@ class BookingPageDrawer extends StatelessWidget {
     );
   }
 }
-// prices
-// settings
