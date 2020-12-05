@@ -1,0 +1,31 @@
+name: shawar_salon
+description: Mohammad Shawar Salon app
+publish_to: 'none'
+
+version: 0.1.0
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.3
+  get: ^3.20.0
+  get_storage: ^1.3.2
+  avatar_glow: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/images/
+
+  fonts:
+    - family: Monton
+      fonts:
+        - asset: lib/fonts/monton.ttf
