@@ -65,6 +65,7 @@ class _BookingPageState extends State<BookingPage> {
   }
 
   void _listenToBooking() {
+    widget._isBooked = prefs.hasBooking();
     prefs.getBox().listenKey(Keys.BOOKING_TIME, (value) {
       setState(() => widget._isBooked = (value != null));
     });
