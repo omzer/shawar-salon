@@ -14,6 +14,8 @@ class Messages extends Translations {
           'working_hours': 'ساعات العمل',
           'archive': 'الأرشيف',
           'settings': 'إعدادات التطبيق',
+          'customer_name': 'إسم الزبون',
+          'phone_number': 'رقم الهاتف',
         }
       };
 }

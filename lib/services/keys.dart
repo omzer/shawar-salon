@@ -5,4 +5,6 @@ class Keys {
 
   // Profile info
   static final String PROFILE_IMAGE = 'PROFILE_IMAGE';
+  static final String USER_NAME = 'USER_NAME';
+  static final String PHONE_NUMBER = 'PHONE_NUMBER';
 }
