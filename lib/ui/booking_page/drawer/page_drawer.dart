@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shawar_salon/ui/profile/profile_page.dart';
 
 import 'drawer_booking_count.dart';
 import 'drawer_item.dart';
@@ -31,15 +33,15 @@ class BookingPageDrawer extends StatelessWidget {
   Widget _buildProfile() {
     return DrawerItem(
       icon: Icons.account_circle,
-      text: 'معلومات الحساب',
-      direction: null,
+      text: 'profile'.tr,
+      direction: ProfilePage(),
     );
   }
 
   Widget _buildWorkingHours() {
     return DrawerItem(
       icon: Icons.access_time_outlined,
-      text: 'ساعات العمل',
+      text: 'working_hours'.tr,
       direction: null,
     );
   }
@@ -47,7 +49,7 @@ class BookingPageDrawer extends StatelessWidget {
   Widget _buildHistory() {
     return DrawerItem(
       icon: Icons.history,
-      text: 'الأرشيف',
+      text: 'archive'.tr,
       direction: null,
     );
   }
@@ -55,7 +57,7 @@ class BookingPageDrawer extends StatelessWidget {
   Widget _buildSettings() {
     return DrawerItem(
       icon: Icons.settings,
-      text: 'إعدادات التطبيق',
+      text: 'settings'.tr,
       direction: null,
     );
   }
