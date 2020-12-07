@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shawar_salon/services/prefs.dart';
 
 class BookingInfo extends StatelessWidget {
+  final bool shouldPresent;
+
+  BookingInfo({@required this.shouldPresent});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 100,
+      height: shouldPresent ? 100 : 0,
       child: Card(
         margin: EdgeInsets.all(8),
         color: Theme.of(context).accentColor,
@@ -25,10 +31,10 @@ class BookingInfo extends StatelessWidget {
 
   Widget _buildCancelBooking() {
     return FlatButton.icon(
-      onPressed: () {},
+      onPressed: () => Prefs.getInstance().writeBookingTime(null),
       icon: Icon(Icons.cancel_outlined, color: Colors.white),
       label: Text(
-        'إلغاء الحجز',
+        'remove_booking'.tr,
         style: TextStyle(
           color: Colors.white,
           fontSize: 16,

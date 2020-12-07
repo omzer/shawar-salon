@@ -3,7 +3,7 @@ import 'package:shawar_salon/services/keys.dart';
 
 class Prefs {
   static Prefs _instance;
-  final box = GetStorage();
+  final _box = GetStorage();
 
   static Prefs getInstance() {
     if (_instance == null) _instance = Prefs();
@@ -12,9 +12,19 @@ class Prefs {
 
   Future<void> init() async => await GetStorage.init();
 
-  int getBookingCount() => box.read(Keys.BOOKING_COUNT) ?? 0;
+  int getBookingCount() => _box.read(Keys.BOOKING_COUNT) ?? 0;
 
   Future<void> increaseBookingCount() async {
-    await box.write(Keys.BOOKING_COUNT, getBookingCount() + 1);
+    await _box.write(Keys.BOOKING_COUNT, getBookingCount() + 1);
   }
+
+  Future<void> writeBookingTime(time) async {
+    await _box.write(Keys.BOOKING_TIME, time);
+  }
+
+  String getBookingTime() => _box.read(Keys.BOOKING_TIME) ?? null;
+
+  bool hasBooking() => _box.read(Keys.BOOKING_TIME) != null;
+
+  GetStorage getBox() => _box;
 }

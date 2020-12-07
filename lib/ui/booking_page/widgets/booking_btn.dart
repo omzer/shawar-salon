@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shawar_salon/services/prefs.dart';
 
 class BookingButton extends StatelessWidget {
   final bool enable;
@@ -27,5 +28,7 @@ class BookingButton extends StatelessWidget {
     );
   }
 
-  void onPressed() {}
+  void onPressed() {
+    Prefs.getInstance().writeBookingTime('helisNullOrBlank');
+  }
 }
