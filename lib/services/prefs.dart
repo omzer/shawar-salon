@@ -28,5 +28,7 @@ class Prefs {
 
   GetStorage getBox() => _box;
 
-  String getProfileImage() => _box.read(Keys.PROFILE_IMAGE) ?? '1';
+  int getProfileImage() => _box.read(Keys.PROFILE_IMAGE) ?? 1;
+
+  void writeProfileImage(img) => _box.write(Keys.PROFILE_IMAGE, img);
 }
