@@ -20,6 +20,7 @@ class BookingPageDrawer extends StatelessWidget {
             ShaveCounter(),
             _buildProfile(),
             _buildWorkingHours(),
+            _buildHistory(),
             _buildSettings(),
           ],
         ),
@@ -43,6 +44,14 @@ class BookingPageDrawer extends StatelessWidget {
     );
   }
 
+  Widget _buildHistory() {
+    return DrawerItem(
+      icon: Icons.history,
+      text: 'الأرشيف',
+      direction: null,
+    );
+  }
+
   Widget _buildSettings() {
     return DrawerItem(
       icon: Icons.settings,
@@ -51,6 +60,7 @@ class BookingPageDrawer extends StatelessWidget {
     );
   }
 
+  // todo: convert to it's own widget
   Widget _buildTopSpacer(context) {
     return Container(
       margin: EdgeInsets.fromLTRB(0, 16, 8, 0),
