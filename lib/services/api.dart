@@ -5,7 +5,7 @@ class API {
   }
 
   static Future<bool> book(String time) async {
-    await Future.delayed(Duration(milliseconds: 600));
+    await Future.delayed(Duration(milliseconds: 2400));
     return true;
   }
 }

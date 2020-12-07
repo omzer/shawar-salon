@@ -7,6 +7,8 @@ class Messages extends Translations {
           'salon_name': 'صالون شاور',
           'book': 'إحجز',
           'shave_count_message': 'لقد حلقت %s مرة قبلاً',
+          'connection_error': 'حدث خطأ أثناء الإتصال, يرجى المحاولة فيما بعد',
+          'loading_success': 'تم التحميل',
         }
       };
 }
