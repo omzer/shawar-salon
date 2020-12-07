@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shawar_salon/services/prefs.dart';
 
-class ShaveCounter extends StatelessWidget {
+class DrawerBookingCounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,11 +19,15 @@ class ShaveCounter extends StatelessWidget {
             size: 30,
           ),
           title: Text(
-            'shave_count_message'.trArgs(['12']),
+            'shave_count_message'.trArgs([_getNumberOfPreviousBookings()]),
             style: TextStyle(fontSize: 22),
           ),
         ),
       ),
     );
+  }
+
+  String _getNumberOfPreviousBookings() {
+    return Prefs.getInstance().getBookingCount().toString();
   }
 }

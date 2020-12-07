@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
+import 'package:shawar_salon/services/prefs.dart';
 import 'package:shawar_salon/services/theme_service.dart';
 import 'package:shawar_salon/ui/landing_page/landing_page.dart';
 
 import 'localization/Messages.dart';
 
 void main() async {
-  await GetStorage.init();
+  await Prefs.getInstance().init();
   runApp(MyApp());
 }
 

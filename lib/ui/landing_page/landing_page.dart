@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
   }
 
   void _startNextPage(snap) async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(Duration(milliseconds: 500));
     Get.off(BookingPage(shopStatus: snap.data, numberOfCustomers: 3));
   }
 }
