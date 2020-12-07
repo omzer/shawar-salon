@@ -27,4 +27,6 @@ class Prefs {
   bool hasBooking() => _box.read(Keys.BOOKING_TIME) != null;
 
   GetStorage getBox() => _box;
+
+  String getProfileImage() => _box.read(Keys.PROFILE_IMAGE) ?? '1';
 }

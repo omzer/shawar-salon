@@ -34,7 +34,7 @@ class BookingInfo extends StatelessWidget {
       onPressed: () => Prefs.getInstance().writeBookingTime(null),
       icon: Icon(Icons.cancel_outlined, color: Colors.white),
       label: Text(
-        'remove_booking'.tr,
+        'cancel'.tr,
         style: TextStyle(
           color: Colors.white,
           fontSize: 16,

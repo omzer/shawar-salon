@@ -6,7 +6,7 @@ class Messages extends Translations {
         'ar': {
           'salon_name': 'صالون شاور',
           'book': 'إحجز',
-          'remove_booking': 'إلغاء الحجز',
+          'cancel': 'إلغاء',
           'shave_count_message': 'لقد حلقت %s مرة قبلاً',
           'connection_error': 'حدث خطأ أثناء الإتصال, يرجى المحاولة فيما بعد',
           'loading_success': 'تم التحميل',
