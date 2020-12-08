@@ -19,6 +19,7 @@ class Messages extends Translations {
           'be_aware': 'إنتبه',
           'enter_valid_data': 'الرجاء إدخال الإسم ورقم الهاتف بشكل صحيح',
           'back': 'رجوع',
+          'colors_theme': 'نمط الألوان',
           'stay_on_page': 'البقاء في الصفحة',
           'confirm_back_msg':
               'يوجد لديك تعديلات لم تقم بحفظها, هل أنت متأكد من أنك تريد الرجوع؟',
@@ -27,6 +28,7 @@ class Messages extends Translations {
           'salon_name': 'Shawar\'s Salon',
           'book': 'Book',
           'cancel': 'Cancel',
+          'colors_theme': 'Colors theme',
           'shave_count_message': 'You shaved %s times before',
           'connection_error': 'Connection error, please try again later',
           'loading_success': 'Loaded successfully',

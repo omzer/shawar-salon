@@ -37,5 +37,7 @@ class ThemeService {
 
   static getTheme(int index) => _themes[index];
 
+  static getThemesCount() => _themes.length;
+
   static void changeTheme(int index) => Get.changeTheme(_themes[index]);
 }

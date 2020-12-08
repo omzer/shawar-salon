@@ -47,7 +47,7 @@ class BookingInfo extends StatelessWidget {
   Widget _buildText() {
     return Text(
       'باقي لحجزك: 3 ساعات و 27 دقيقة',
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
     );
   }
 }
