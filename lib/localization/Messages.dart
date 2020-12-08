@@ -16,6 +16,11 @@ class Messages extends Translations {
           'settings': 'إعدادات التطبيق',
           'customer_name': 'إسم الزبون',
           'phone_number': 'رقم الهاتف',
+          'be_aware': 'إنتبه',
+          'back': 'رجوع',
+          'stay_on_page': 'البقاء في الصفحة',
+          'confirm_back_msg':
+              'يوجد لديك تعديلات لم تقم بحفظها, هل أنت متأكد من أنك تريد الرجوع؟',
         }
       };
 }

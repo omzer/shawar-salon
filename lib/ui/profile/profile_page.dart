@@ -24,19 +24,53 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _buildAppBar(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _buildImage(),
-            SizedBox(width: double.infinity, height: 20),
-            _buildNameField(),
-            SizedBox(height: 20),
-            _buildPhoneField(),
-          ],
+    return WillPopScope(
+      onWillPop: onBackPressed,
+      child: Scaffold(
+        appBar: _buildAppBar(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              _buildImage(),
+              SizedBox(width: double.infinity, height: 20),
+              _buildNameField(),
+              SizedBox(height: 20),
+              _buildPhoneField(),
+            ],
+          ),
         ),
       ),
+    );
+  }
+
+  bool _noChangesMade() {
+    if (_prefs.getProfileImage() != this.profileImage) return false;
+    if (_prefs.getUserName() != this.userName) return false;
+    if (_prefs.getPhoneNumber() != this.phoneNumber) return false;
+
+    return true;
+  }
+
+  Future<bool> onBackPressed() async {
+    if (_noChangesMade()) return true;
+
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      title: 'be_aware'.tr,
+      content: Text('confirm_back_msg'.tr),
+      confirm: FlatButton.icon(
+        onPressed: () => Get.back(result: true),
+        icon: Icon(Icons.exit_to_app),
+        label: Text('back'.tr),
+        color: Theme.of(context).accentColor,
+      ),
+      cancel: FlatButton.icon(
+        onPressed: () => Get.back(result: false),
+        icon: Icon(Icons.edit),
+        label: Text('stay_on_page'.tr),
+        color: Colors.green,
+      ),
+      backgroundColor: Theme.of(context).primaryColor,
     );
   }
 
