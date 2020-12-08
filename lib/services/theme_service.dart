@@ -10,21 +10,21 @@ class ThemeService {
       primaryColor: Color(0xff1c2546),
       scaffoldBackgroundColor: Color(0xff1c2546),
       textTheme: _darkTheme.textTheme.apply(bodyColor: Colors.white),
-      accentColor: Colors.orange,
+      accentColor: Colors.lightBlueAccent,
     ),
     // Theme 1 (Dark)
     _darkTheme.copyWith(
       primaryColor: Color(0xff353a41),
       scaffoldBackgroundColor: Color(0xff353a41),
       textTheme: _darkTheme.textTheme.apply(bodyColor: Colors.white),
-      accentColor: Colors.lightBlueAccent,
+      accentColor: Color(0xffe856a7),
     ),
     // Theme 2 (Green)
     _darkTheme.copyWith(
-      primaryColor: Color(0xff25cf50),
-      scaffoldBackgroundColor: Color(0xff25cf50),
+      primaryColor: Color(0xff3eb855),
+      scaffoldBackgroundColor: Color(0xff3eb855),
       textTheme: _darkTheme.textTheme.apply(bodyColor: Colors.white),
-      accentColor: Color(0xffba07f5),
+      accentColor: Color(0xfff08935),
     ),
     // Theme 3 (Orange)
     _darkTheme.copyWith(
