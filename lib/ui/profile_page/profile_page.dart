@@ -71,7 +71,6 @@ class _ProfilePageState extends State<ProfilePage> {
         label: Text('stay_on_page'.tr),
         color: Colors.green,
       ),
-      backgroundColor: Theme.of(context).primaryColor,
     );
   }
 

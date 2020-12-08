@@ -13,11 +13,7 @@ class DrawerBookingCounter extends StatelessWidget {
         elevation: 4,
         margin: EdgeInsets.all(8),
         child: ListTile(
-          leading: Icon(
-            Icons.thumb_up,
-            color: Colors.white,
-            size: 30,
-          ),
+          leading: Icon(Icons.done_all, size: 30),
           title: Text(
             'shave_count_message'.trArgs([_getNumberOfPreviousBookings()]),
             style: TextStyle(fontSize: 22),

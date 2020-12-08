@@ -43,4 +43,8 @@ class Prefs {
   Future writePhoneNumber(number) async {
     await _box.write(Keys.PHONE_NUMBER, number);
   }
+
+  int getTheme() => _box.read(Keys.APP_THEME) ?? 0;
+
+  Future writeTheme(theme) async => await _box.write(Keys.APP_THEME, theme);
 }

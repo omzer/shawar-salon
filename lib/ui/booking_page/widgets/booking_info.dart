@@ -32,7 +32,7 @@ class BookingInfo extends StatelessWidget {
   Widget _buildCancelBooking() {
     return FlatButton.icon(
       onPressed: () => Prefs.getInstance().writeBookingTime(null),
-      icon: Icon(Icons.cancel_outlined, color: Colors.white),
+      icon: Icon(Icons.cancel_sharp, color: Colors.white),
       label: Text(
         'cancel'.tr,
         style: TextStyle(
@@ -40,18 +40,14 @@ class BookingInfo extends StatelessWidget {
           fontSize: 16,
         ),
       ),
-      color: Colors.red.withOpacity(0.76),
+      color: Colors.red,
     );
   }
 
   Widget _buildText() {
     return Text(
       'باقي لحجزك: 3 ساعات و 27 دقيقة',
-      style: TextStyle(
-        fontSize: 18,
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-      ),
+      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
     );
   }
 }

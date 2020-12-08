@@ -7,8 +7,10 @@ import 'package:shawar_salon/ui/landing_page/landing_page.dart';
 import 'localization/Messages.dart';
 
 void main() async {
-  await Prefs.getInstance().init();
+  final prefs = Prefs.getInstance();
+  await prefs.init();
   runApp(MyApp());
+  ThemeService.changeTheme(prefs.getTheme());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,20 +23,9 @@ class MyApp extends StatelessWidget {
       locale: Locale('ar'),
       fallbackLocale: Locale('ar'),
       // Meta data
-      title: 'صالون شاور',
-      // Theme
-      theme: _configureTheme(context),
+      title: 'salon_name'.tr,
       // First page
       home: LandingPage(),
-    );
-  }
-
-  ThemeData _configureTheme(context) {
-    return ThemeService.getTheme(
-      Theme.of(context),
-      Colors.indigo,
-      Colors.white,
-      Colors.orange,
     );
   }
 }

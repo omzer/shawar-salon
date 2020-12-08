@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shawar_salon/services/theme_service.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -19,6 +20,6 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   void aa() async {
-    Get.changeTheme(ThemeData.light());
+    ThemeService.changeTheme(3);
   }
 }
