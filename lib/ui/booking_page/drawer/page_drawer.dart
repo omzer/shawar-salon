@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shawar_salon/ui/profile/profile_page.dart';
+import 'package:shawar_salon/ui/profile_page/profile_page.dart';
 
 import 'drawer_booking_count.dart';
 import 'drawer_item.dart';

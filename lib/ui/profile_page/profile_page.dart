@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shawar_salon/services/prefs.dart';
-import 'package:shawar_salon/ui/profile/profile_image.dart';
-import 'package:shawar_salon/ui/profile/profile_input_field.dart';
+
+import 'profile_image.dart';
+import 'profile_input_field.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
