@@ -5,9 +5,7 @@ import 'package:shawar_salon/services/theme_service.dart';
 class ThemeItem extends StatelessWidget {
   final int themeIndex;
   final Function onThemeChanged;
-  final double _size = 60;
   ThemeData _theme;
-  bool _isSelected;
 
   ThemeItem({
     @required this.themeIndex,
@@ -17,37 +15,22 @@ class ThemeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _theme = ThemeService.getTheme(themeIndex);
-    _isSelected = Prefs.getInstance().getTheme() == themeIndex;
+    if (Prefs.getInstance().getTheme() == themeIndex) return Container();
+
     return InkWell(
       onTap: onColorPressed,
-      child: SizedBox(
-        height: _size,
-        width: _size,
-        child: Card(
-          margin: const EdgeInsets.all(8),
-          color: _theme.accentColor,
-          child: Padding(
-            padding: EdgeInsets.all(_isSelected ? 4 : 0),
-            child: _buildContainer(),
-          ),
-        ),
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: _buildContainer(),
       ),
     );
   }
 
   Widget _buildContainer() {
-    return Container(
-      decoration: new BoxDecoration(
-        gradient: new LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            _theme.primaryColor,
-            _theme.scaffoldBackgroundColor,
-            _theme.accentColor,
-          ],
-        ),
-      ),
+    return CircleAvatar(
+      radius: 30,
+      backgroundColor: _theme.primaryColor,
+      child: Icon(Icons.color_lens, color: _theme.accentColor),
     );
   }
 
