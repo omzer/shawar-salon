@@ -114,7 +114,14 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   void onSavePressed() async {
-    // todo validate
+    if (userName.length < 5 || phoneNumber.length < 7) {
+      Get.snackbar(
+        'be_aware'.tr,
+        'enter_valid_data'.tr,
+        snackPosition: SnackPosition.BOTTOM,
+      );
+      return;
+    }
     await _prefs.writeProfileImage(profileImage);
     await _prefs.writeUserName(userName);
     await _prefs.writePhoneNumber(phoneNumber);

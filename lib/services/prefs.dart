@@ -34,11 +34,11 @@ class Prefs {
     await _box.write(Keys.PROFILE_IMAGE, img);
   }
 
-  String getUserName() => _box.read(Keys.USER_NAME) ?? null;
+  String getUserName() => _box.read(Keys.USER_NAME) ?? '';
 
   Future writeUserName(name) async => await _box.write(Keys.USER_NAME, name);
 
-  String getPhoneNumber() => _box.read(Keys.PHONE_NUMBER) ?? null;
+  String getPhoneNumber() => _box.read(Keys.PHONE_NUMBER) ?? '';
 
   Future writePhoneNumber(number) async {
     await _box.write(Keys.PHONE_NUMBER, number);

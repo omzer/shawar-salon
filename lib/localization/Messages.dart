@@ -17,6 +17,7 @@ class Messages extends Translations {
           'customer_name': 'إسم الزبون',
           'phone_number': 'رقم الهاتف',
           'be_aware': 'إنتبه',
+          'enter_valid_data': 'الرجاء إدخال الإسم ورقم الهاتف بشكل صحيح',
           'back': 'رجوع',
           'stay_on_page': 'البقاء في الصفحة',
           'confirm_back_msg':
