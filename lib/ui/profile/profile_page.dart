@@ -18,6 +18,8 @@ class _ProfilePageState extends State<ProfilePage> {
   void initState() {
     super.initState();
     this.profileImage = _prefs.getProfileImage();
+    this.userName = _prefs.getUserName();
+    this.phoneNumber = _prefs.getPhoneNumber();
   }
 
   @override
