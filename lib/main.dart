@@ -11,6 +11,7 @@ void main() async {
   await prefs.init();
   runApp(MyApp());
   ThemeService.changeTheme(prefs.getTheme());
+  Get.updateLocale(Locale(prefs.getLanguage()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +21,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // locale
       translations: Messages(),
-      locale: Locale('ar'),
       fallbackLocale: Locale('ar'),
       // Meta data
       title: 'salon_name'.tr,
