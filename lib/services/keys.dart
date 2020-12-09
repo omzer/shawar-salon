@@ -10,5 +10,5 @@ class Keys {
 
   // App info
   static final String APP_THEME = 'APP_THEME';
-
+  static final String APP_LANGUAGE = 'APP_LANGUAGE';
 }
