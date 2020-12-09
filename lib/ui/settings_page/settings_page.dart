@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shawar_salon/services/prefs.dart';
 import 'package:shawar_salon/services/theme_service.dart';
 import 'package:shawar_salon/ui/settings_page/theme_item.dart';
 
@@ -14,7 +15,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: AppBar(title: Text('settings'.tr), elevation: 0),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -27,15 +28,17 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   Widget _buildThemeItems() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(
-        ThemeService.getThemesCount(),
-        (index) => ThemeItem(
-          themeIndex: index,
-          onThemeChanged: () => setState(() {}),
-        ),
-      ),
+    final List<Widget> themes = [];
+    final selected = Prefs.getInstance().getTheme();
+
+    for (int i = 0; i < ThemeService.getThemesCount(); i++) {
+      if (i == selected) continue;
+      themes.add(ThemeItem(themeIndex: i, themeChanged: () => setState(() {})));
+    }
+
+    return SizedBox(
+      width: double.infinity,
+      child: Wrap(alignment: WrapAlignment.spaceEvenly, children: themes),
     );
   }
 }

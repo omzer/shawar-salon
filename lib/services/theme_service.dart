@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 class ThemeService {
   static final _darkTheme = ThemeData.dark();
+  static final _lightTheme = ThemeData.light();
 
   static final _themes = [
     // Theme 0  (default)
@@ -19,12 +20,12 @@ class ThemeService {
       textTheme: _darkTheme.textTheme.apply(bodyColor: Colors.white),
       accentColor: Color(0xffe856a7),
     ),
-    // Theme 2 (Green)
+    // Theme 2 (Black)
     _darkTheme.copyWith(
-      primaryColor: Color(0xff3eb855),
-      scaffoldBackgroundColor: Color(0xff3eb855),
+      primaryColor: Colors.black,
+      scaffoldBackgroundColor: Colors.black,
       textTheme: _darkTheme.textTheme.apply(bodyColor: Colors.white),
-      accentColor: Color(0xfff08935),
+      accentColor: Colors.red,
     ),
     // Theme 3 (Orange)
     _darkTheme.copyWith(
@@ -32,6 +33,17 @@ class ThemeService {
       scaffoldBackgroundColor: Color(0xfff29b38),
       textTheme: _darkTheme.textTheme.apply(bodyColor: Colors.white),
       accentColor: Color(0xff252a30),
+    ),
+    // Theme 4 (Light)
+    _lightTheme.copyWith(
+      primaryColor: Colors.white,
+      scaffoldBackgroundColor: Colors.white,
+      textTheme: _lightTheme.textTheme.apply(bodyColor: Colors.black),
+      appBarTheme: _lightTheme.appBarTheme.copyWith(
+        textTheme: _lightTheme.textTheme.apply(bodyColor: Colors.black),
+        iconTheme: _lightTheme.iconTheme.copyWith(color: Colors.black),
+      ),
+      accentColor: Colors.lightBlue,
     ),
   ];
 

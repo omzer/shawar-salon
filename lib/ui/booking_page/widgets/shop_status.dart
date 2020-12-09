@@ -14,7 +14,7 @@ class ShopStatus extends StatelessWidget {
         style: TextStyle(
           fontFamily: 'Monton',
           fontSize: 48,
-          color: isOpen ? Colors.white : Colors.red,
+          color: isOpen ? null : Colors.red,
         ),
       ),
     );

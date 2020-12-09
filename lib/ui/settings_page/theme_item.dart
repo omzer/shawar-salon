@@ -4,39 +4,26 @@ import 'package:shawar_salon/services/theme_service.dart';
 
 class ThemeItem extends StatelessWidget {
   final int themeIndex;
-  final Function onThemeChanged;
-  ThemeData _theme;
+  final Function themeChanged;
 
-  ThemeItem({
-    @required this.themeIndex,
-    @required this.onThemeChanged,
-  });
+  ThemeItem({@required this.themeIndex, @required this.themeChanged});
 
   @override
   Widget build(BuildContext context) {
-    _theme = ThemeService.getTheme(themeIndex);
-    if (Prefs.getInstance().getTheme() == themeIndex) return Container();
-
+    final _theme = ThemeService.getTheme(themeIndex);
     return InkWell(
       onTap: onColorPressed,
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: _buildContainer(),
+      child: CircleAvatar(
+        radius: 30,
+        backgroundColor: _theme.primaryColor,
+        child: Icon(Icons.color_lens, color: _theme.accentColor),
       ),
-    );
-  }
-
-  Widget _buildContainer() {
-    return CircleAvatar(
-      radius: 30,
-      backgroundColor: _theme.primaryColor,
-      child: Icon(Icons.color_lens, color: _theme.accentColor),
     );
   }
 
   void onColorPressed() {
     ThemeService.changeTheme(themeIndex);
     Prefs.getInstance().writeTheme(themeIndex);
-    onThemeChanged();
+    themeChanged();
   }
 }
